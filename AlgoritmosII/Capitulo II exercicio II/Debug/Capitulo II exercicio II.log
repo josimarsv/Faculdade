@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\users\marilia santos\documents\visual studio 2015\projects\algorotmo e logica de programação ii\capitulo ii exercicio ii\source.cpp(9): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+  Capitulo II exercicio II.vcxproj -> C:\Users\Marilia Santos\documents\visual studio 2015\Projects\Algorotmo e logica de programação II\Debug\Capitulo II exercicio II.exe
