@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\users\marilia santos\documents\visual studio 2015\projects\exerciciosfaculdade\c completo ou total\c completo ou total\source.cpp(12): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+  C Completo ou total.vcxproj -> C:\Users\Marilia Santos\Documents\Visual Studio 2015\Projects\ExerciciosFaculdade\C Completo ou total\Debug\C Completo ou total.exe
