@@ -46,16 +46,16 @@ int main()
 /*Função para leitura dos dados*/
 void leitura(void)
 {
-	for (int i = 1; i <= 20; i++)
+	for (int i = 0; i <= 1; i++)
 	{
 		printf("****** Programa para cadastro de 20 pessoas ******\n\n");
 
 		printf("---------------------------------------------------\n");
-		printf("Cadastro da %i* pessoa\n", i);
+		printf("Cadastro da %i* pessoa\n", i+1);
 		printf("---------------------------------------------------\n");
 
 		printf("Informe o nome: ");
-		scanf("%s", &pessoas[i].nome);
+		scanf(" %[^\n]s", &pessoas[i].nome);
 		printf("Informe a idade: ");
 		scanf("%i", &pessoas[i].idade);
 		printf("Informe o sexo (F ou M): ");
