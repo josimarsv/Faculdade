@@ -21,5 +21,17 @@ namespace CalcWithRepos
         {
 
         }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtCarregar_Click(object sender, EventArgs e)
+        {
+            string filepath = "COLOCAR O CAMINHO DO ARQUIVO XML NO REPOSITORIO";
+
+            dadosdatabela.ReadXml(filepath); /* recupera os dados do xml e coloca no data. */
+        }
     }
 }

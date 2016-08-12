@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.BoxCNPJ = new System.Windows.Forms.TextBox();
+            this.BoxCodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.BoxVol = new System.Windows.Forms.TextBox();
+            this.BoxPeso = new System.Windows.Forms.TextBox();
+            this.BoxValorNF = new System.Windows.Forms.TextBox();
+            this.BoxM3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,11 +48,14 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.ComboBoxEstados = new System.Windows.Forms.ComboBox();
+            this.ComboBoxCidades = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtCalcular = new System.Windows.Forms.Button();
+            this.dadosdatabela = new System.Data.DataSet();
+            this.BtCarregar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dadosdatabela)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -65,57 +68,57 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Calculadora de Fretes";
             // 
-            // textBox2
+            // BoxCNPJ
             // 
-            this.textBox2.Location = new System.Drawing.Point(108, 74);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(164, 20);
-            this.textBox2.TabIndex = 2;
+            this.BoxCNPJ.Location = new System.Drawing.Point(108, 74);
+            this.BoxCNPJ.Name = "BoxCNPJ";
+            this.BoxCNPJ.Size = new System.Drawing.Size(164, 20);
+            this.BoxCNPJ.TabIndex = 2;
             // 
-            // textBox3
+            // BoxCodigo
             // 
-            this.textBox3.Location = new System.Drawing.Point(108, 101);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(163, 20);
-            this.textBox3.TabIndex = 3;
+            this.BoxCodigo.Location = new System.Drawing.Point(108, 101);
+            this.BoxCodigo.Name = "BoxCodigo";
+            this.BoxCodigo.Size = new System.Drawing.Size(163, 20);
+            this.BoxCodigo.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(72, 141);
+            this.label2.Location = new System.Drawing.Point(70, 186);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(138, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = "Dados da nota fiscal";
             // 
-            // textBox4
+            // BoxVol
             // 
-            this.textBox4.Location = new System.Drawing.Point(171, 179);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 5;
+            this.BoxVol.Location = new System.Drawing.Point(172, 223);
+            this.BoxVol.Name = "BoxVol";
+            this.BoxVol.Size = new System.Drawing.Size(100, 20);
+            this.BoxVol.TabIndex = 5;
             // 
-            // textBox5
+            // BoxPeso
             // 
-            this.textBox5.Location = new System.Drawing.Point(171, 205);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 6;
+            this.BoxPeso.Location = new System.Drawing.Point(172, 249);
+            this.BoxPeso.Name = "BoxPeso";
+            this.BoxPeso.Size = new System.Drawing.Size(100, 20);
+            this.BoxPeso.TabIndex = 6;
             // 
-            // textBox6
+            // BoxValorNF
             // 
-            this.textBox6.Location = new System.Drawing.Point(172, 231);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 7;
+            this.BoxValorNF.Location = new System.Drawing.Point(172, 275);
+            this.BoxValorNF.Name = "BoxValorNF";
+            this.BoxValorNF.Size = new System.Drawing.Size(100, 20);
+            this.BoxValorNF.TabIndex = 7;
             // 
-            // textBox7
+            // BoxM3
             // 
-            this.textBox7.Location = new System.Drawing.Point(172, 257);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 8;
+            this.BoxM3.Location = new System.Drawing.Point(172, 301);
+            this.BoxM3.Name = "BoxM3";
+            this.BoxM3.Size = new System.Drawing.Size(100, 20);
+            this.BoxM3.TabIndex = 8;
             // 
             // label3
             // 
@@ -147,7 +150,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 185);
+            this.label6.Location = new System.Drawing.Point(12, 230);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 13);
             this.label6.TabIndex = 12;
@@ -156,7 +159,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 211);
+            this.label7.Location = new System.Drawing.Point(12, 256);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(31, 13);
             this.label7.TabIndex = 13;
@@ -165,7 +168,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(13, 237);
+            this.label8.Location = new System.Drawing.Point(12, 282);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(31, 13);
             this.label8.TabIndex = 14;
@@ -174,7 +177,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(13, 263);
+            this.label9.Location = new System.Drawing.Point(12, 308);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 13);
             this.label9.TabIndex = 15;
@@ -184,7 +187,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(82, 387);
+            this.label10.Location = new System.Drawing.Point(81, 418);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(108, 15);
             this.label10.TabIndex = 16;
@@ -193,7 +196,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 415);
+            this.label11.Location = new System.Drawing.Point(12, 446);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(31, 13);
             this.label11.TabIndex = 17;
@@ -202,7 +205,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(12, 437);
+            this.label12.Location = new System.Drawing.Point(12, 469);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(49, 13);
             this.label12.TabIndex = 18;
@@ -211,41 +214,42 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(12, 461);
+            this.label13.Location = new System.Drawing.Point(12, 492);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(36, 13);
             this.label13.TabIndex = 19;
             this.label13.Text = "Taxas";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(12, 483);
+            this.label14.Location = new System.Drawing.Point(12, 514);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(68, 13);
             this.label14.TabIndex = 20;
             this.label14.Text = "Frete Liquido";
             // 
-            // comboBox1
+            // ComboBoxEstados
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(151, 284);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 21;
+            this.ComboBoxEstados.FormattingEnabled = true;
+            this.ComboBoxEstados.Location = new System.Drawing.Point(151, 327);
+            this.ComboBoxEstados.Name = "ComboBoxEstados";
+            this.ComboBoxEstados.Size = new System.Drawing.Size(121, 21);
+            this.ComboBoxEstados.TabIndex = 21;
             // 
-            // comboBox2
+            // ComboBoxCidades
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(151, 312);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 22;
+            this.ComboBoxCidades.FormattingEnabled = true;
+            this.ComboBoxCidades.Location = new System.Drawing.Point(151, 354);
+            this.ComboBoxCidades.Name = "ComboBoxCidades";
+            this.ComboBoxCidades.Size = new System.Drawing.Size(121, 21);
+            this.ComboBoxCidades.TabIndex = 22;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(13, 291);
+            this.label15.Location = new System.Drawing.Point(12, 335);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(40, 13);
             this.label15.TabIndex = 23;
@@ -254,31 +258,46 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(13, 319);
+            this.label16.Location = new System.Drawing.Point(12, 362);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(40, 13);
             this.label16.TabIndex = 24;
             this.label16.Text = "Cidade";
             // 
-            // button1
+            // BtCalcular
             // 
-            this.button1.Location = new System.Drawing.Point(197, 340);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Calcular";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtCalcular.Location = new System.Drawing.Point(197, 381);
+            this.BtCalcular.Name = "BtCalcular";
+            this.BtCalcular.Size = new System.Drawing.Size(75, 23);
+            this.BtCalcular.TabIndex = 25;
+            this.BtCalcular.Text = "Calcular";
+            this.BtCalcular.UseVisualStyleBackColor = true;
+            // 
+            // dadosdatabela
+            // 
+            this.dadosdatabela.DataSetName = "DadosDaTabela";
+            // 
+            // BtCarregar
+            // 
+            this.BtCarregar.Location = new System.Drawing.Point(197, 128);
+            this.BtCarregar.Name = "BtCarregar";
+            this.BtCarregar.Size = new System.Drawing.Size(75, 23);
+            this.BtCarregar.TabIndex = 26;
+            this.BtCarregar.Text = "Carregar";
+            this.BtCarregar.UseVisualStyleBackColor = true;
+            this.BtCarregar.Click += new System.EventHandler(this.BtCarregar_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 516);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(284, 536);
+            this.Controls.Add(this.BtCarregar);
+            this.Controls.Add(this.BtCalcular);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.ComboBoxCidades);
+            this.Controls.Add(this.ComboBoxEstados);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -291,19 +310,21 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.BoxM3);
+            this.Controls.Add(this.BoxValorNF);
+            this.Controls.Add(this.BoxPeso);
+            this.Controls.Add(this.BoxVol);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.BoxCodigo);
+            this.Controls.Add(this.BoxCNPJ);
             this.Controls.Add(this.label1);
+            this.HelpButton = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Calculadora de fretes";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dadosdatabela)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,13 +332,13 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox BoxCNPJ;
+        private System.Windows.Forms.TextBox BoxCodigo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox BoxVol;
+        private System.Windows.Forms.TextBox BoxPeso;
+        private System.Windows.Forms.TextBox BoxValorNF;
+        private System.Windows.Forms.TextBox BoxM3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -330,11 +351,13 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox ComboBoxEstados;
+        private System.Windows.Forms.ComboBox ComboBoxCidades;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtCalcular;
+        private System.Data.DataSet dadosdatabela;
+        private System.Windows.Forms.Button BtCarregar;
     }
 }
 
