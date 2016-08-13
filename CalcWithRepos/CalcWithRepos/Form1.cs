@@ -33,5 +33,15 @@ namespace CalcWithRepos
 
             dadosdatabela.ReadXml(filepath); /* recupera os dados do xml e coloca no data. */
         }
+
+        private void BoxCNPJ_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BoxCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

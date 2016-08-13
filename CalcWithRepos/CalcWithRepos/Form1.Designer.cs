@@ -74,6 +74,7 @@
             this.BoxCNPJ.Name = "BoxCNPJ";
             this.BoxCNPJ.Size = new System.Drawing.Size(164, 20);
             this.BoxCNPJ.TabIndex = 2;
+            this.BoxCNPJ.TextChanged += new System.EventHandler(this.BoxCNPJ_TextChanged);
             // 
             // BoxCodigo
             // 
@@ -81,6 +82,7 @@
             this.BoxCodigo.Name = "BoxCodigo";
             this.BoxCodigo.Size = new System.Drawing.Size(163, 20);
             this.BoxCodigo.TabIndex = 3;
+            this.BoxCodigo.TextChanged += new System.EventHandler(this.BoxCodigo_TextChanged);
             // 
             // label2
             // 
